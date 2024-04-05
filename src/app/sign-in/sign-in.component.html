@@ -1,0 +1,27 @@
+<div class="relative h-full w-full flex items-center justify-center flex-col bg-[#fff] dark:bg-[#374151]">
+  <button class="flex transition-transform hover:scale-125 align-middle absolute top-5 right-0.5 px-2"
+    (click)="darkMode.set(!darkMode())">
+    @if (!darkMode()) {<span class="material-icons">dark_mode</span>}
+    @if(darkMode()){<span class="material-icons">light_mode</span>}
+  </button>
+  <div class="flex items-center justify-center gap-2">
+    <img src="/assets/logo2.svg" alt="Logo"/>
+    <h4 class="text-[#3D3D3D] dark:text-white">Synergy</h4>
+  </div>
+  <p class="p-2 text-[#000] dark:text-white mb-3">Please enter your login information</p>
+  <form class="w-[320px] sm:w-[400px]">
+    <div class="flex flex-col gap-1 p-2">
+      <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="email">Email</label>
+      <input  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="text" id="email" name="email" placeholder="joe@gmail.com">
+    </div>
+    <div class="flex flex-col gap-1 p-2">
+      <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="password">Password</label>
+      <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="password" id="password" name="password" placeholder="*********">
+    </div>
+    <p class="text-[#000] dark:text-white flex items-center justify-center p-2">Forget Your Password ?</p>
+    <div class="flex gap-1 p-2">
+    <button class="bg-[#4A85F6] w-full flex items-center justify-center p-2 text-white rounded-md " type="submit">Log in</button>
+    </div>
+  </form>
+  <p class="text-black dark:text-white ">You do not have an account ? <a class="text-[#4A85F6]" routerLink="/signup" href="/signup">Create an account</a> </p>
+</div>

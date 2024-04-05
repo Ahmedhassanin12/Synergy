@@ -1,0 +1,9 @@
+<div>
+  <app-header></app-header>
+  <button class=" flex transition-transform hover:scale-125 align-middle absolute top-5 right-0 px-2"
+    (click)="darkMode.set(!darkMode())">
+    @if (!darkMode()) {<span class="material-icons">dark_mode</span>}
+    @if(darkMode()){<span class="material-icons">light_mode</span>}
+  </button>
+</div>
+<app-sidebar></app-sidebar>
