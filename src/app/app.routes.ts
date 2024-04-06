@@ -12,6 +12,7 @@ export const routes: Routes = [
     path: '',
     redirectTo: '/dashborad',
     title: 'Dashborad',
+    pathMatch: 'full',
   },
   { path: '**', component: NotFoundComponent },
 ];
