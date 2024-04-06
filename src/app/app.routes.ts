@@ -5,9 +5,14 @@ import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeLayoutComponent },
-  { path: 'dashborad', redirectTo: '', pathMatch: 'full' },
-  { path: 'signin', component: SignInComponent },
-  { path: 'signup', component: SignUpComponent },
+  { path: 'dashborad', title: 'Dashboard', pathMatch: 'full' },
+  { path: 'signin', title: 'Sign in', component: SignInComponent },
+  { path: 'signup', title: 'Sign up', component: SignUpComponent },
+  {
+    path: '',
+    redirectTo: '/dashborad',
+    title: 'Dashborad',
+    component: HomeLayoutComponent,
+  },
   { path: '**', component: NotFoundComponent },
 ];
